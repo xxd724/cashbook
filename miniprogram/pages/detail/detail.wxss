@@ -1,0 +1,65 @@
+.detail{
+  padding: 0 40rpx;
+  background-color: #fff;
+}
+.money{
+  height: 160rpx;
+  line-height: 160rpx;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.money input{
+  display: block;
+  height: 100%;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+.listItem{
+  display: flex;
+  border-top: 2rpx solid #f3f3f3;
+  height: 100rpx;
+  line-height:100rpx;
+
+}
+.itemTitle .text{
+  margin: 0 10rpx;
+  font-size: 28rpx;
+}
+.listItem .inp{
+  margin: auto 10rpx;
+}
+.color-1{
+  color: #f387a4;
+}
+.color-2{
+  color: #5fa0f0;
+}
+.color-3{
+  color: #37a345;
+}
+.color-4{
+  color: #f7fa43;
+}
+.btn{
+  display: flex;
+  justify-content: space-between;
+}
+.Btn{
+  width: 300rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding-left: 10rpx;
+  background-color: #da5a05;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 20rpx;
+  margin-top: 20rpx;
+}
+/* 收入样式 */
+.add{
+  color:#cf3131;
+}
+/* 支出样式 */
+.reduce{
+  color: #27a50e;
+} 

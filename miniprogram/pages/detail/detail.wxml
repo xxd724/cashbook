@@ -1,0 +1,62 @@
+<view class="detail">
+  <!-- 上 金额 -->
+  <view class="money {{msgArr.costType == 'shouru' ? 'add' : 'reduce'}}">
+    <view wx:if="{{isAbled}}">{{msgArr.costType == 'shouru' ? '+' : '-'}}￥{{msgArr.money}}</view>
+    <input wx:else type="digit" value="{{msgArr.money}}" bindchange="moneyChange" data-money="money"/>
+  </view>
+  <!-- 下 详细情况 -->
+  <view class="listItem">
+    <!-- 左边 -->
+    <view class="itemTitle">
+      <text class="iconfont icon-fenlei fl color-1"></text>
+      <text class="text">分类</text>
+    </view>
+    <!-- 右边 -->
+    <view class="inp fl">
+      <picker bindchange="fenleiChange" value="{{index}}" range="{{Arr}}"  disabled="{{isAbled}}">
+        {{iconTitle ? msgArr.iconTitle : Arr[index]}}
+      </picker>
+    </view>
+  </view>
+  <view class="listItem">
+    <!-- 左边 -->
+    <view class="itemTitle">
+      <text class="iconfont icon-ziyuan fl color-2"></text>
+      <text class="text">账户</text>
+    </view>
+    <!-- 右边 -->
+    <view class="inp fl">
+      <picker bindchange="zhanghuChange" value="{{index}}" range="{{array}}"  disabled="{{isAbled}}">
+        {{account ? msgArr.account : array[index]}}
+      </picker>
+      <!-- <input type="text" value="{{msgArr.account}}" disabled="{{isAbled}}"/> -->
+    </view>
+  </view>
+  <view class="listItem">
+    <!-- 左边 -->
+    <view class="itemTitle">
+      <text class="iconfont icon-rili fl color-3"></text>
+      <text class="text">日期</text> 
+    </view>
+    <!-- 右边 -->
+    <view class="inp fl">
+      <picker mode="date" start="2010-01-01" end="{{end}}" bindchange="dateChange" data-date="date" disabled="{{isAbled}}">
+        <view>{{info.date == '' ? msgArr.date : info.date}}</view>
+      </picker>
+      <!-- <input type="text" value="{{msgArr.date}}" disabled="{{isAbled}}"/> -->
+    </view>
+  </view>
+  <view class="listItem">
+    <!-- 左边 -->
+    <view class="itemTitle">
+      <text class="iconfont icon-beizhu fl color-4"></text>
+      <text class="text">备注</text>
+    </view>
+    <!-- 右边 -->
+    <view class="inp fl"><input type="text" value="{{msgArr.comment}}" disabled="{{isAbled}}" data-comment="comment"/></view>
+  </view>
+  <view class="btn">
+    <view class="Btn fl" bindtap="modifydetail">{{edit}}</view>
+    <view class="Btn fr" bindtap="deletedetail" data-id="{{msgArr._id}}">{{delete}}</view>
+  </view>
+</view>

@@ -1,0 +1,126 @@
+.nav{
+  display: flex;
+  background-color: #FCFF50;
+}
+.year,.day{
+  position: relative;
+  width: 160rpx;
+  height: 80rpx;
+}
+.yearBox{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+  position: relative;
+  z-index: 10;
+  background-color: #FCFF50;
+}
+.yearBox text{
+  margin-left: 6rpx;
+  font-size: 26rpx;
+}
+/* 年列表 */
+.yearList,
+.dayList{
+  position: absolute;
+  top: -480rpx;
+  left: 0;
+  width: 100%;
+  max-height: 480rpx;/* 盒子最大高度，假设内容撑开的高度比最大高度小，则盒子高度会是内容撑开的实际高度*/
+  overflow-y: auto; /*内容超出盒子高度时会显示滚动条*/
+  background-color: #FCFF50;
+  text-align: center;
+  line-height: 80rpx;
+  font-size: 26rpx;
+  transition: top 0.5s;
+  z-index: 6;
+}
+/* 显示列表类 */
+.showList{
+  top:80rpx;
+}
+/* 月份样式 */
+.month{
+width: calc(100% - 230rpx);
+height: 80rpx;
+overflow-x: auto;
+}
+.monthList{
+  display: flex;
+  justify-content: space-around;
+  width: 960rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+}
+.monthItem{
+  font-size: 28rpx;
+}
+.monthItem.active,
+.dayItem.active{
+  font-weight: bold;
+}
+/* 日份样式 */
+.dayBox{
+  display: flex;
+  /* justify-content: center; */
+  line-height: 80rpx;
+  font-size: 28rpx;
+  font-weight: bold;
+  position: relative;
+  z-index: 10;
+  background-color: #FCFF50;
+}
+.line{
+  margin-top: 20rpx;
+  width: 2rpx;
+  height: 40rpx;
+  background-color: #bc951c;
+}
+.text{
+  margin: 0 10rpx;
+}
+
+/* 收入支出标题样式 */
+.title_tap{
+  display: flex;
+  margin: 30rpx 0 40rpx;
+}
+.title_item{
+  width: 50%;
+  text-align: center;
+}
+.title_item .title_content{
+  width: 80%;
+  margin: 0 auto;
+  border: 2rpx solid transparent;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+.title_item .title_content .title_text{
+  font-weight: bold;
+  padding-bottom: 10rpx;
+}
+.title_item .add .title_money{
+  font-weight: bold;
+  color: #f3787a;
+}
+.title_item .reduce .title_money{
+  font-weight: bold;
+  color:#43977d;
+}
+/* 收入类 */
+.title_item .act.add{
+  border-color: #f3787a;
+}
+/* 支出类 */
+.title_item .act.reduce{
+  border-color: #43977d;
+}
+/* 图表 */
+.canvas{
+  width: 100%;
+  height: 600rpx;
+}

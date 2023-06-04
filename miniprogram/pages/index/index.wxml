@@ -1,0 +1,61 @@
+<view class="home">
+  <!-- 头部 -->
+  <view class="header">
+    <!-- 结余 -->
+    <view class="header_top">
+      <view class="top_title">本月结余</view>
+      <view class="top_num">{{surplus.num}}.<text>{{surplus.decimal}}</text></view>
+    </view>
+    <!-- 收入支出 -->
+    <view class="header_bottom clearfix">
+      <view class="bottom_item fl">
+        <view class="item_title">本月收入</view>
+        <view class="item_num">{{monCost.shouru}}</view>
+      </view>
+      <!-- 线条 -->
+      <view class="line"></view>
+      <view class="bottom_item fl">
+        <view class="item_title">本月支出</view>
+        <view class="item_num">{{monCost.zhichu}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 内容列表 -->
+  <view class="content">
+    <!-- 上 日期信息 -->
+    <view class="date_box"> 
+      <!-- 左边信息 -->
+      <view class="date_info">
+        <text>{{currentDate}}</text>
+        <text wx:if="{{isToday}}">今天</text>
+        <text>收入:{{dayCost.shouru}}</text>
+        <text>支出：{{dayCost.zhichu}}</text>
+      </view>
+      <!-- 右边信息 更多 日期选择 -->
+      <picker mode="date" disabled="{{!isAuth}}" bindtap="isAuthTap" start="2000-01-01" end="{{end}}" bindchange="selectDate">
+        <view class="date_more">
+          <view class="yuan"></view>
+          <view class="yuan"></view>
+          <view class="yuan"></view>
+        </view>
+      </picker>
+    </view>
+    <!-- 下 记账数据列表 -->
+    <view class="item_list" wx:for="{{dayMsgData}}" wx:key="index" bindtap="navToDetail" data-id="{{item._id}}"> 
+      <!-- 左 图标 -->
+      <view class="item_icon">
+        <image src="{{item.iconUrl}}"></image>
+      </view>
+      <!-- 右 记账信息 -->
+      <view class="item_msg">
+        <!-- 左 信息 -->
+        <view class="msg_info">
+          <view class="msg_title">{{item.iconTitle}}</view>
+          <view class="msg_commnet">{{item.comment}}</view>
+        </view>
+        <!-- 右 金额 -->
+        <view class="msg_money {{item.costType == 'shouru' ? 'add' : 'reduce'}}">{{item.costType == 'shouru' ? '+' : '-'}}￥{{item.money}}</view>
+      </view>
+    </view>
+  </view>
+</view>

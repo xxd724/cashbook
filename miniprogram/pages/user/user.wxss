@@ -1,0 +1,62 @@
+.userInfo{
+  background-color: #FCFF50;
+  padding: 40rpx 0;
+}
+.userImg{
+  width: 200rpx;
+  height: 200rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.userInfo .btn{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 0;
+  text-align: center;
+  line-height: 200rpx;
+}
+.userImg image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.userName{
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-weight: bold;
+}
+/* 列表 */
+.userList{
+  padding: 0 30rpx;
+}
+.listItem{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #dbddde;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+.itemTitle text{
+  margin-right: 10rpx;
+}
+.listItem .ico-xiangyou{
+  color: #a2a2a2;
+}
+.color-1{
+  color: #f58ba7;
+}
+.color-2{
+  color: #70b0ff;
+}
+.color-3{
+  color: #fe7b63;
+}
+.color-4{
+  color: #fdb201;
+}
+.color-5{
+  color: #36363a98;
+}

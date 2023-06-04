@@ -1,0 +1,83 @@
+<view class="user">
+  <!-- 用户信息 -->
+  <view class="userInfo">
+    <!-- 头像 -->
+    <view class="userImg">
+      <image wx:if="{{isAuth}}" src="{{userInfo.avatarUrl}}"></image>
+      <button wx:else class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfo">获取头像</button>
+    </view>
+    <!-- 用户名 -->
+    <view class="userName">{{userInfo.nickName}}</view>
+  </view>
+
+  <!-- 列表 -->
+  <view class="userList">
+    <!-- 单个列表 -->
+    <view class="listItem">
+      <!-- 左边 -->
+      <view class="itemTitle">
+        <text class="iconfont icon-fenlei color-1"></text>
+        分类
+      </view>
+      <!-- 右边 -->
+      <view class="iconfont icon-xiangyou"></view>
+    </view>
+
+    <!-- 单个列表 -->
+    <view class="listItem">
+      <!-- 左边 -->
+      <view class="itemTitle">
+        <text class="iconfont icon-qianbao1 color-2"></text>
+        账户
+      </view>
+      <!-- 右边 -->
+      <view class="iconfont icon-xiangyou"></view>
+    </view>
+
+    <!-- 单个列表 -->
+    <view class="listItem">
+      <!-- 左边 -->
+      <view class="itemTitle">
+        <text class="iconfont icon-shengban-shengji color-3"></text>
+        升级APP
+      </view>
+      <!-- 右边 -->
+      <view class="iconfont icon-xiangyou"></view>
+    </view>
+
+    <!-- 单个列表 -->
+    <view class="listItem">
+      <!-- 左边 -->
+      <view class="itemTitle">
+        <text class="iconfont icon-iconyijianfankui color-4"></text>
+        意见反馈
+      </view>
+      <!-- 右边 -->
+      <view class="iconfont icon-xiangyou"></view>
+    </view>
+
+    <!-- 单个列表 -->
+    <view class="listItem">
+      <!-- 左边 -->
+      <view class="itemTitle">
+        <text class="iconfont icon-shezhi color-5"></text>
+        设置
+      </view>
+      <!-- 右边 -->
+      <view class="iconfont icon-xiangyou"></view>
+    </view>
+
+    <!-- 单个列表 -->
+    <view class="listItem">
+      <!-- 左边 -->
+      <view class="itemTitle">
+        <text class="iconfont icon-fenxiang color-3"></text>
+        分享给好友
+      </view>
+      <!-- 右边 -->
+      <view class="iconfont icon-xiangyou"></view>
+    </view>
+
+  </view>
+
+</view>

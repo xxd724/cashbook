@@ -1,0 +1,77 @@
+<view class="record">
+  <!-- 头部 -->
+  <view class="header"></view>
+  <!-- 内容 -->
+  <view class="content">
+    <!-- 消费类型选择 -->
+    <view class="typeBox">
+      <!-- 标题 -->
+      <view class="typeTitle">
+        <view class="title_item {{item.isAct ? 'active':''}}" wx:for="{{typeData}}" wx:key="index" bindtap="tapChange" data-index="{{index}}" data-name="typeData">{{item.title}}</view>
+        <!-- <view class="title_item active">支出</view>
+        <view class="title_item">收入</view> -->
+      </view>
+      <!-- 图标轮播图 -->
+      <view class="typeBanner">
+        <swiper indicator-dots="true" indicator-color="#c9c9c9" indicator-active-color="#FCFF50" autoplay="true" interval="3000" duration="800" circular="true" class="swiper">
+          <!-- 滑块 -->
+          <swiper-item wx:for="{{bannerTypeData}}" wx:key="index">
+          <view class="banner_item">
+            <!-- 单个类型 -->
+            <view class="item_list {{itemName.isAct ? 'active' : ''}}" wx:for="{{item}}" wx:for-item="itemName" wx:for-index="id" wx:key="id" bindtap="bannerTap" data-index="{{index}}" data-id="{{id}}">
+              <view class="item_icon">
+              <image src="{{itemName.icon_url}}" bindload="imgLoad"></image>
+              </view>
+              <!-- 文字 -->
+              <view class="item_text">{{itemName.title}}</view>
+            </view>
+          </view>
+          </swiper-item>
+          <!-- <swiper-item>22</swiper-item> -->
+        </swiper>
+      </view>
+    </view>
+    <!-- 账户选择 -->
+    <view class="accountBox">
+      <!-- 上 标题 -->
+      <view class="accountTitle">
+        <text class="iconfont icon-qianbao">账户选择</text>
+      </view>
+      <!-- 下 选择项 -->
+      <view class="accountItem">
+        <view class="account {{item.isAct ? 'active':''}}" wx:for="{{accountData}}" wx:key="index" bindtap="tapChange" data-index="{{index}}" data-name="accountData">{{item.title}}</view>
+        <!-- <view class="account active">现金</view>
+        <view class="account">微信钱包</view>
+        <view class="account">支付宝</view>
+        <view class="account">储蓄卡</view>
+        <view class="account">信用卡</view> -->
+      </view>
+    </view>
+    <!-- 时间 金额 备注 -->
+    <view class="infoBox">
+      <!-- 时间 -->
+      <picker mode="date"  start="2000-01-01" end="{{end}}" bindchange="getInfo" data-type="date">
+        <view class="infoItem">
+        <view class="infoTitle">日期</view>
+        <view class="date">{{info.date}}</view>
+      </view>
+      </picker>
+      <!-- 金额 -->
+      <view class="infoItem">
+        <view class="infoTitle">金额</view>
+        <view class="infoInp">
+          <input type="digit" placeholder="请输入记账金额" value="{{info.money}}" bindchange="getInfo" data-type="money"/>
+        </view>
+      </view>
+      <!-- 备注 -->
+      <view class="infoItem">
+        <view class="infoTitle">备注</view>
+        <view class="infoInp">
+          <input type="text" placeholder="请输入备注信息" value="{{info.comment}}" bindchange="getInfo" data-type="comment"/>
+        </view>
+      </view>
+    </view>
+    <!-- 按钮 -->
+    <view class="saveBth" bindtap="addMsgData">保存</view>
+  </view>
+</view>

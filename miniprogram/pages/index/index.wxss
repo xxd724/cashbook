@@ -1,0 +1,137 @@
+.header{
+  position: sticky;
+  top: 0;
+  padding: 40rpx;
+  background-color: #FCFF50;
+  height: 330rpx;
+  box-sizing: border-box;
+}
+.header_top .top_title,
+.bottom_item .item_title{
+  font-size: 28rpx;
+  color: #98710A;
+}
+.header_top .top_num,
+.bottom_item .item_num{
+  font-size: 50rpx;
+  font-weight: bold;
+  color: #2F1D11;
+  padding: 10rpx 0 20rpx;
+}
+.header_top .top_num text{
+  font-size: 40rpx;
+}
+.header_bottom{
+  position: relative;
+}
+.bottom_item{
+  width: 50%;
+  text-align: center;
+}
+.bottom_item .item_num{
+  font-size: 40rpx;
+}
+/* 线条 */
+.line{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1px;
+  height: 50%;
+  background-color: #BC951C;
+}
+/* 内容区 */
+.content{
+  padding: 0 20rpx;
+}
+.date_box{
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 0 10rpx;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top:330rpx;
+  background-color: #fff;
+}
+.date_info text{
+  font-size: 28rpx;
+  color: #9c943d;
+  margin-right: 14rpx;
+}
+.date_more{
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+}
+/* 圆点 */
+.yuan{
+  width: 8rpx;
+  height: 8rpx;
+  background-color: #9c9c9c;
+  margin: 0 6rpx;
+  border-radius: 50%;
+}
+/* 列表样式 */
+.item_list{
+  display: flex;
+  box-sizing: border-box;
+  height: 140rpx;
+  margin: 20rpx 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e9e9e9;
+}
+.item_icon{
+  width: 120rpx;
+  height: 120rpx;
+}
+.item_icon image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.item_msg{
+  width: calc(100% - 120rpx);
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between; 
+}
+.msg_info{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.msg_info .msg_title{
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+.msg_info .msg_commnet{
+  color: #a9a9a9;
+  margin-top: 10rpx;
+  /* 单行文本超出以单个点代替样式 */
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.msg_money{
+  display: flex;
+  align-items: center;
+  font-size: 36rpx;
+  font-weight: bold;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+/* 收入样式 */
+.add{
+  color:#cf3131;
+}
+/* 支出样式 */
+.reduce{
+  color: #27a50e;
+} 

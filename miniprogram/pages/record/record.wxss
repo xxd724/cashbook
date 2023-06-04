@@ -1,0 +1,133 @@
+page{
+  background-color: #edecf1;
+}
+.header{
+  height: 160rpx;
+  background-color: #FCFF50;
+}
+.content{
+  padding: 0 40rpx;
+  margin-top: -100rpx;
+}
+/* 消费类型选择样式 */
+.typeBox{
+  background-color: #fff;
+  /* height: 400rpx; */
+  padding-top: 40rpx;
+  border-radius: 50rpx; 
+}
+.typeTitle{
+  width: 320rpx;
+  margin: 0 auto;
+  display: flex;
+  border: 1px solid #FCFF50;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+.title_item{
+  width: 50%;
+  padding: 15rpx 0;
+  text-align: center;
+}
+.title_item.active{
+  background-color: #FCFF50;
+  font-weight: bold;
+}
+/* 轮播图片样式 */
+.banner_item{
+  display: flex;
+  flex-wrap: wrap;
+}
+.swiper{
+  height: 400rpx;
+}
+.item_list{
+  width: 25%;
+  margin-bottom: 20rpx;
+  margin-top: 30rpx;
+}
+.item_icon{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 auto;
+}
+
+.item_icon image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.item_text{
+  text-align: center;
+  color: #bababa;
+  font-size: 28rpx;
+  margin-top: 10rpx;
+}
+/* 轮播图标激活样式 */
+.item_list.active .item_icon{
+  transform: scale(1.2);
+}
+.item_list.active .item_text{
+  font-weight: bold;
+  color: #000;
+  transform: scale(1.2);
+}
+/* 账户选择 */
+.accountBox,.infoBox{
+  background-color: #fff;
+  border-radius: 30rpx;
+  padding: 20rpx 20rpx 40rpx;
+  margin-top: 40rpx;
+}
+.accountTitle{
+  font-weight: bold;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #eee;
+}
+.accountTitle text{
+  font-size: 32rpx;
+}
+.accountItem{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.accountItem .account{
+  font-size: 28rpx;
+  color: #afafaf;
+  background-color: #edecf1;
+  padding: 0 18rpx;
+  line-height: 50rpx;
+  border-radius: 25rpx;
+}
+.accountItem .account.active{
+  color: #fff;
+  background-color: #FCFF50;
+  font-weight: bold;
+}
+/* 信息样式 */
+.infoBox{
+  padding-bottom: 20rpx;
+}
+.infoItem{
+  display: flex;
+  margin-bottom: 20rpx;
+}
+.infoTitle{
+  width: 80rpx;
+}
+.infoInp{
+  width: calc(100% - 80rpx);
+}
+.infoInp input{
+  width: 100%;
+}
+/* 按钮 */
+.saveBth{
+  width: 80%;
+  padding: 20rpx;
+  background-color: #FCFF50;
+  margin: 40rpx auto;
+  text-align: center;
+  border-radius: 30rpx;
+}

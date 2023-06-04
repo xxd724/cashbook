@@ -1,0 +1,14 @@
+@import "./style//iconfont.wxss";
+@import "./style//iconfont1.wxss";
+@import "./style//Icon.wxss";
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.clearfix::after{
+  content: "";
+  clear: both;
+  display: block;
+}

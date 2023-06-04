@@ -1,0 +1,50 @@
+<view class="chart">
+  <!-- 时间导航栏 -->
+  <view class="nav">
+    <!-- 年 -->
+    <view class="year" bindtap="showList" data-name="isYear">
+      <view class="yearBox">
+        {{currentYear}}年<text class="iconfont icon-xiangxiajiantou"></text>
+      </view>
+      <!-- 年列表 -->
+      <view class="yearList {{isYear ? 'showList' : ''}}">
+        <view class="yearItem" wx:for="{{yearList}}" wx:key="index" bindtap="yearTap" data-year="{{item}}">{{item}}年</view>
+      </view>
+    </view>
+    <!-- 月 -->
+    <view class="month">
+      <!-- 月列表 -->
+      <view class="monthList">
+        <view class="monthItem {{item.isAct ? 'active' : ''}}" wx:for="{{monthList}}" wx:key="index" bindtap="monthTap" data-index="{{index}}">{{item.month}}月</view>
+      </view>
+    </view>
+    <!-- 日 -->
+    <view class="day" bindtap="showList" data-name="isDay">
+      <view class="dayBox">
+        <view class="line"></view>
+        <view class="text">刷选</view>
+        <view class="iconfont icon-shaixuan"></view>
+      </view>
+      <!-- 日列表 -->
+      <view class="dayList {{isDay ? 'showList' : ''}}">
+        <view class="dayItem {{item.isAct ? 'active' : ''}}" wx:for="{{dayList}}" wx:key="index" bindtap="dayTap" data-index="{{index}}">{{item.day}}号</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 收入 支出 -->
+  <view class="title_tap">
+    <!-- 单个标题 -->
+    <view class="title_item" wx:for="{{titleData}}" wx:key="index" bindtap="titleSelect" data-index="{{index}}">
+      <view class="title_content {{item.isAct ? 'act' : ''}} {{item.type}}">
+        <view class="title_text">{{item.name}}</view>
+        <view class="title_money">￥{{item.money}}</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 图表 -->
+  <canvas class="canvas" canvas-id="pieCanvas" wx:if="{{isHasData}}"></canvas>
+  <view wx:else>暂无数据</view>
+  
+</view>
